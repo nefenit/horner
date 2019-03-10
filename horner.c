@@ -21,10 +21,10 @@ int main(int argc, char **argv) {
 	x = strtold(argv[1], NULL);
 	p = strtold(argv[2], NULL);
 	
-	for(i = 3; i <= argc; i++)
-		p = p*x + argv[2+i];
+	for(i = 3; i < argc; i++)
+		p = p*x + strtold(argv[i]);
 	
-	printf("%Lf", p);
+	printf("%Lf\n", p);
 	
 	return EXIT_SUCCESS;
 }
