@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 	p = strtold(argv[2], NULL);
 	
 	for(i = 3; i < argc; i++)
-		p = p*x + strtold(argv[i]);
+		p = p*x + strtold(argv[i], NULL);
 	
 	printf("%Lf\n", p);
 	
