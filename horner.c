@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 void usage(int status) {
-	fprintf(stderr, "usage: horner X AN...");
+	fprintf(stderr, "usage: horner X AN...\n");
 	exit(status);
 }
 
