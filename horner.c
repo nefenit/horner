@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 	x = strtold(argv[1], NULL);
 	p = strtold(argv[2], NULL);
 	
-	for(i = 3; i < argc; i++)
+	for(i = 3; i < argc; ++i)
 		p = p*x + strtold(argv[i], NULL);
 	
 	printf("%Lf\n", p);
