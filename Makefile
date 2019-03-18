@@ -6,5 +6,7 @@ CFLAGS=-Wall -pedantic -std=c99 -O2
 all:
 	@$(CC) $(CFLAGS) horner.c -o horner
 
+.PHONY: clean
+
 clean:
 	@rm horner
