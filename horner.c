@@ -20,7 +20,7 @@
 #define LICENSE_ABBREVIATION ""
 #define	LICENSE_LINE         ""
 
-void usage(int status) {
+void usage(const char * progname, int status) {
 	printf(
 	"usage: %s [MODE] X AN...\n"
 	"       %s [-h|--help]\n"
@@ -29,9 +29,9 @@ void usage(int status) {
 	"Modes\n"
 	"  -i, --iterative\n"
 	"  -r, --recursive\n",
-	PROGRAM_NAME,	
-	PROGRAM_NAME,	
-	PROGRAM_NAME);
+	progname,	
+	progname,	
+	progname);
 	exit(status);
 }
 
@@ -66,6 +66,7 @@ long double horneri(long double a[], long double x, uintmax_t n) {
 }
 
 int main(int argc, char *argv[]) {
+	const char *progname;
 	long double x, *a;
 	bool recursive, help, ver;
 	int  c, i;
@@ -109,7 +110,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	if(help)
-		usage(EXIT_SUCCESS);	
+		usage(progname, EXIT_SUCCESS);	
 	if(ver)
 		version(PROGRAM_NAME, PROGRAM_VERSION);
 
@@ -117,7 +118,7 @@ int main(int argc, char *argv[]) {
 	argv += optind;
 
 	if(argc < 2) {
-		usage(EXIT_FAILURE);	
+		usage(progname, EXIT_FAILURE);	
 	} else {
 		x = strtold(*argv, NULL);
 		--argc;
