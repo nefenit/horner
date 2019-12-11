@@ -1,6 +1,9 @@
-/* horner.c - Evaluates polynomial using Horner's scheme
- * (c) Copyright 2019 Bartosz Mierzynski
- * Written in C99
+/**
+ * @file    horner.c
+ * @author  Bartosz Mierzynski <nefenit@gmail.com>
+ * @date    2019
+ * @version 1.0
+ * @brief   Evaluates polynomial using Horner's scheme.
  */
 
 #include <stdbool.h>
