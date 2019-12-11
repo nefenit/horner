@@ -20,8 +20,6 @@
 #define LICENSE_ABBREVIATION ""
 #define	LICENSE_LINE         ""
 
-#define STREQ(a, b) (strcmp(a, b) == 0)
-
 void usage(int status) {
 	printf(
 	"usage: %s [MODE] X AN...\n"
